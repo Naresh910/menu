@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./style1.css">
+  <style type="text/css">
+  	
+  	html {
+  height: 100%;
+}
+
+body {
+  background: #333;
+  color: #FFF;
+  display: flex;
+  height: 100%;
+}
+
+.container {
+  margin: auto;
+  max-width: 768px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+.toggle, .dropdown-menu {
+  width: 100%;
+}
+
+.is-active .dropdown-menu {
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+<!-- <div class="container mt-2">
+	<div class="row" style="background: #f0f;">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-10" style="background: #ff0">
+			<div class="row" style="background: #f0f;">
+				<div class="col-sm-3 padding">
+					<button onclick="myFunction()" class="dropbtn residential">All Residential
+					  <i class="fa fa-caret-down"></i>
+					</button>
+					<div id="myDropdown" class="dropdown-residential">
+					    <label class="check ml_10">
+		                	<input type="checkbox">Project
+		                </label><br>
+		                <label class="check">
+		                	<input type="checkbox" style="margin-top: 8px;">All Residential
+		                </label><br>
+		                <label class="check">
+		                	<input type="checkbox">Commercial
+		                </label><br>
+					</div>
+				</div>
+				<div class="col-sm-5 padding" style="background: #ff0">
+					<input type="text" placeholder="Search" class="search_text" onclick="openMenu();" id="search_id">
+				</div>
+				<div class="col-sm-4 padding">
+					<button class="search_btn">SEARCH</button>
+					<button class="map_btn">MAP</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-1"></div>
+	</div>
+	======================================================================= -->
+	<!-- <div class="row" style="background: #f0f;" id="hide_content">
+	<div class="col-sm-1"></div>
+	<div class="col-sm-10" style="background: #ff0">
+		<div class="row" style="background: #f0f;">
+			<div class="col-sm-3 padding">
+			
+					
+			</div>
+			<div class="col-sm-5 padding" style="background: #ff0">
+				<input type="text" placeholder="Search" class="search_text" onclick="openMenu();" id="search_id">
+			</div>
+			<div class="col-sm-4 padding">
+				<button class="search_btn">SEARCH</button>
+				<button class="map_btn">MAP</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-1"></div>
+</div>
+</div>  -->
+<!-- ===================== -->
+
+<!-- ========================= -->
+
+<!-- <div class="container">
+  <div class="text-center">
+    <div class="dropdown">
+      <a href="#" title="" class="btn btn-primary toggle">Toggle menu</a>
+      <ul class="dropdown-menu list-group">
+        <li class="list-group-item">List item 1</li>
+        <li class="list-group-item">List item 2</li>
+        <li class="list-group-item">List item 3</li>
+      </ul>
+    </div>  
+  </div>
+</div> -->
+
+
+<!--  -->
+      <script>
+         window.onload = function(){
+            var hideMe = document.getElementById('hideMe');
+            document.onclick = function(e){
+               if(e.target.id !== 'hideMe'){
+                  hideMe.style.display = 'none';
+               }
+            };
+         };
+      </script>
+      <div id="hideMe">Click outside this div and hide it.</div>
+   
+
+
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+<script type="text/javascript">
+	
+// function myFunction() {
+//   document.getElementById("myDropdown").classList.toggle("show");
+// }
+// function openMenu(){
+// 	document.getElementById('hide_content').
+// }
+
+
+
+
+const $menu = $('.dropdown');
+
+$(document).mouseup(function (e) {
+   if (!$menu.is(e.target) // if the target of the click isn't the container...
+   && $menu.has(e.target).length === 0) // ... nor a descendant of the container
+   {
+     $menu.removeClass('is-active');
+  }
+ });
+
+$('.toggle').on('click', () => {
+  $menu.toggleClass('is-active');
+});
+
+
+</script>
+</body>
+</html>

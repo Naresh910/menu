@@ -1,0 +1,52 @@
+body{
+	background: #ddd;
+}
+.search_btn{
+	width: 110px;
+	border: none;
+	color: #fff;
+	background: #4092DF;
+	padding: 10px;
+}
+.map_btn{
+	width: 110px;
+	border: none;
+	color: #fff;
+	background: #0DA78E;;
+	padding: 10px;
+}
+.padding{
+	padding: 0;
+
+}
+.search_text{
+	width: 100%;
+	padding: 10px;
+	border: none;
+	outline-color: #ffffff;
+}
+.residential{
+	width: 100%;
+	padding: 10px;
+	border:none;
+}
+#hide_content{
+	visibility: hidden;
+}
+
+.dropdown-residential {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-residential input:type['checkbox'] {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.show {display: block;}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu</title>
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<div class="container-fluid bg-hero" [style.background-image]="'url(/assets/img/landing-page/bg3.jpg)'">
+  <div class="row">
+    <div id="blanket"></div>
+    <div class="col main-hero" style="padding-top:100px">
+      <table width="100%" border="0" align="center">
+        <tr>
+          <td height="50">
+            <h1>Find homes for sale in your area</h1>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <table width="100%" border="0">
+              <tr>
+                <td width="50%" height="72">Homes for Sale </td>
+                <td width="50%">Property Insights</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="col-sm-12" id="all_rest">
+              <div class="dropdownp">
+                <button onclick="myFunction()" class="dropbtn" id="property">Property type
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <input type="text" placeholder="Search" class="search_text" onclick="openMenu();" id="search_id">
+                <button class="search">Search</button>
+                <button class="map">Map</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <label class="check ml_10">
+                  <input type="radio" name="pro" class="pr" value="Project" onclick="propertyData()"><i class="ch">Project</i>
+                  </label><br>
+                  <label class="check">
+                  <input type="radio" name="pro" class="pr" value="All Residential" onclick="propertyData()" style="margin-top: 8px;"><i class="ch">All Residential</i>
+                  </label><br>
+                  <label class="check">
+                  <input type="radio" name="pro" class="pr" value="Commercial" onclick="propertyData()"><i class="ch">Commercial</i>
+                  </label><br>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="form-group mb-2 hide" id="menu"> -->
+            <div class="col-sm-12 hide" id="menu" >
+              <div class="dropdown_all" id="submenu">
+                <button onclick="allfield()" class="dropbtn" id="all">status
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <button onclick="budget()" value="Budget" class="dropbtn" id="bd">Budget
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <button onclick="bedroom()" class="dropbtn" id="room" >Bedroom
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <!-- <button onclick="posted_by()" class="dropbtn" id="ps" >Posted By
+                  <i class="fa fa-caret-down"></i>
+                </button> -->
+                <!-- <button style="text-align: end">Clear</button> -->                     
+                <!-- <button>clear</button> -->
+                <div id="all_my" class="drop_all">
+                  <label class="check">
+                  <input type="radio" name="d"><i class="ch">Under Construction</i>
+                  </label><br>
+                  <label class="check">
+                  <input type="radio" name="d"><i class="ch">Ready to move</i>
+                  </label><br>
+                </div>
+
+               <!--  <div id="posted" class="post">
+                  <label class="check">
+                  <input type="checkbox" class="getv" value="Owner" onclick="p_posted_by()"><i class="ch">Owner</i>
+                  </label><br>
+                  <label class="check">
+                  <input type="checkbox" class="getv" value="Builder" onclick="p_posted_by()"><i class="ch">Builder</i>
+                  </label><br>
+                  <label class="check">
+                  <input type="checkbox" class="getv" value="Dealer" onclick="p_posted_by()"><i class="ch">Dealer</i>
+                  </label><br> 
+                </div> -->
+
+                <!-- ======================bedroom================== -->
+                <div id="bedroom" class="bed">
+                  <label class="check">
+                  <input type="checkbox" class="messageCheckbox" onclick="checkdata();" value="1"><i class="ch">1 BHK</i>
+                  </label><br>
+                  <label class="check">
+                  <input type="checkbox" class="messageCheckbox" onclick="checkdata();" value="2"><i class="ch">2 BHK</i>
+                  </label><br>
+                  <label class="check" >
+                  <input type="checkbox" class="messageCheckbox" onclick="checkdata();" value="3"><i class="ch">3 BHK</i>
+                  </label><br>
+                  <label class="check" >
+                  <input type="checkbox" class="messageCheckbox" onclick="checkdata();" value="4"><i class="ch">4 BHK</i>
+                  </label><br>
+                  <label class="check" >
+                  <input type="checkbox" class="messageCheckbox" onclick="checkdata();" value="5"><i class="ch">5 BHK</i>
+                  </label><br>
+                  <label class="check">
+                  <input type="checkbox" class="messageCheckbox" onclick="checkdata();" value="6"><i class="ch">6 BHK</i>
+                  </label><br>
+                </div>
+                  <!-- =============budget================================ -->
+                  <div id="budget" class="bud">
+                   <b id="amount">min</b>
+                   <b class="m">-</b>
+                   <b id="max_amount">max</b>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <i class="select_v">select min</i>
+                        <div class="scroll">
+                         <button class="btn_select" value="5 Lacs" onclick="setdata(this)">5 Lacs</button>
+                         <button class="btn_select"  value="10 Lacs" onclick="setdata(this)">10 Lacs</button>
+                         <button class="btn_select" value="15 Lacs" onclick="setdata(this)">15 Lacs</button>
+                         <button class="btn_select" value="20 Lacs" onclick="setdata(this)">20 Lacs</button>
+                         <button class="btn_select" value="25 Lacs" onclick="setdata(this)">25 Lacs</button>
+                         <button class="btn_select" value="30 Lacs" onclick="setdata(this)">30 Lacs</button>
+                         <button class="btn_select" value="35 Lacs" onclick="setdata(this)">35 Lacs</button>
+                         <button class="btn_select" value="40 Lacs" onclick="setdata(this)">40 Lacs</button>
+                         <button class="btn_select" value="45 Lacs" onclick="setdata(this)">45 Lacs</button>
+                         <button class="btn_select" value="50 Lacs" onclick="setdata(this)">50 Lacs</button>
+                         <button class="btn_select" value="55 Lacs" onclick="setdata(this)">55 Lacs</button>
+                         <button class="btn_select" value="60 Lacs" onclick="setdata(this)">60 Lacs</button>
+                         <button class="btn_select" value="65 Lacs" onclick="setdata(this)">65 Lacs</button>
+                         <button class="btn_select" value="70 Lacs" onclick="setdata(this)">70 Lacs</button>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <i class="select_v">select max</i>
+                        <div class="scroll">
+                         <button class="btn_select" value="5 Lacs" onclick="setdata1(this)">5 Lacs</button>
+                         <button class="btn_select"  value="10 Lacs" onclick="setdata1(this)">10 Lacs</button>
+                         <button class="btn_select" value="15 Lacs" onclick="setdata1(this)">15 Lacs</button>
+                         <button class="btn_select" value="20 Lacs" onclick="setdata1(this)">20 Lacs</button>
+                         <button class="btn_select" value="25 Lacs" onclick="setdata1(this)">25 Lacs</button>
+                         <button class="btn_select" value="30 Lacs" onclick="setdata1(this)">30 Lacs</button>
+                         <button class="btn_select" value="35 Lacs" onclick="setdata1(this)">35 Lacs</button>
+                         <button class="btn_select" value="40 Lacs" onclick="setdata1(this)">40 Lacs</button>
+                         <button class="btn_select" value="45 Lacs" onclick="setdata1(this)">45 Lacs</button>
+                         <button class="btn_select" value="50 Lacs" onclick="setdata1(this)">50 Lacs</button>
+                         <button class="btn_select" value="55 Lacs" onclick="setdata1(this)">55 Lacs</button>
+                         <button class="btn_select" value="60 Lacs" onclick="setdata1(this)">60 Lacs</button>
+                         <button class="btn_select" value="65 Lacs" onclick="setdata1(this)">65 Lacs</button>
+                         <button class="btn_select" value="70 Lacs" onclick="setdata1(this)">70 Lacs</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <!-- ========================================-->   
+          </tr>
+          <tr>
+            <td height="79">
+              <table width="100%" border="0"  align="center">
+                <tr>
+                  <td width="50%"  align="center">
+                    <a class="homesplash-button"  href="/properties/map">
+                      <i class="homesplash-button_icon rewicon-map-o"></i>
+                      <div class="homesplash-button_label">
+                        Search by
+                        <span>Map</span>
+                      </div>
+                    </a>
+                  </td>
+                  <td width="50%" align="center">
+                    <a class="homesplash-button"  href="/properties/map">
+                      <i class="homesplash-button_icon rewicon-map-o"></i>
+                      <div class="homesplash-button_label">
+                        Search by
+                        <span>Neighbourhood</span>
+                      </div>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- ================================================== -->
+    </div>
+  </div>
+  <div class="container mt_50">
+    <h4 align="center">Homes for Sale in Popular Cities</h4>
+  </div>
+  <div class="container mt_50">
+    <div class="row">
+      <!-- start of card -->
+      <div class="col-sm-3">
+        <div class="card"><img class="card-img-top" src="../../../assets/img/landing-page/house2.jpg" alt="Card image cap">
+          <div class="card-body">
+            <div class="card-title">Auckland</div>
+          </div>
+        </div>
+      </div>
+      <!-- end of card -->
+      <!-- start of card -->
+      <div class="col-sm-3">
+        <div class="card"><img class="card-img-top" src="../../../assets/img/landing-page/house2.jpg" alt="Card image cap">
+          <div class="card-body">
+            <div class="card-title">Wellington</div>
+          </div>
+        </div>
+      </div>
+      <!-- end of card -->
+      <!-- start of card -->
+      <div class="col-sm-3">
+        <div class="card"><img class="card-img-top" src="../../../assets/img/landing-page/house2.jpg" alt="Card image cap">
+          <div class="card-body">
+            <div class="card-title">Hamilton</div>
+          </div>
+        </div>
+      </div>
+      <!-- end of card -->
+      <!-- start of card -->
+      <div class="col-sm-3">
+        <div class="card"> <img class="card-img-top" src="../../../assets/img/landing-page/house2.jpg" alt="Card image cap">
+          <div class="card-body">
+            <div class="card-title">Christchurch</div>
+          </div>
+        </div>
+      </div>
+      <!-- end of card -->
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.js"></script>
+  <script type="text/javascript" src="./js/myscript.js"></script>
+</body>
+</html>

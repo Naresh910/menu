@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ASB</title>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/mystyle.css">
+</head>
+<body>
+<div class="container mt-4">
+	<div class="row">
+		<div class="col-sm-2 video">
+			<video class="b_play" controls>
+			  <source src="movie.mp4" type="video/mp4">
+			  <source src="movie.ogg" type="video/ogg">
+			  Your browser does not support the video tag.
+			</video>
+		</div>
+		<div class="col-sm-10 mt-3">
+			<p class="text">Match transactions from your bank with books in Xero</p>
+			<div class="line"></div>
+			<p class="text"><a href="">Which</a> how bank reconciliation works inXero</p>
+			<div class="line"></div>
+			<p class="text">See our step-by-step guide to <a href="">bank reconciliation</a></p>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="#">ASB</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navnav" aria-controls="navnav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navnav">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Statement balance</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Balance in Xero</a>
+	      </li>
+	    </ul>
+	    <form class="form-inline my-2 my-lg-0">
+	      <ul class="navbar-nav mr-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Reconciliation Report</a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="mk" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Manage Account
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="mk">
+	          <a class="dropdown-item" href="#">Action</a>
+	          <a class="dropdown-item" href="#">Another action</a>
+	          <div class="dropdown-divider"></div>
+	          <a class="dropdown-item" href="#">Something else here</a>
+	        </div>
+	      </li>
+	    </ul>
+	    </form>
+	  </div>
+	</nav>
+    <div class="line2"></div>
+    <!-- ===================menu of Reconcile========= -->
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+	  <li class="nav-item">
+	    <a class="nav-link active menu_font" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Reconcile</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link menu_font" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Bank Statement</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link menu_font" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Account transactions</a>
+	  </li>
+    </ul>
+	<div class="tab-content" id="pills-tabContent">
+	  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+	  	Reconcile
+	  </div>
+	  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+	  	Bank Statement
+	  </div>
+	  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+	  	Account transactions
+	  </div>
+	</div><br>
+	<!-- =====================Right side menu========== -->
+	<div class="row">
+		<div class="col-sm-6">
+			<h6>Review your bank statement lines...</h6>
+			<div class="line"></div>
+			<div class="col-sm-12">
+				<ul class="nav justify-content-end">
+					<li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          Spent
+				        </a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a class="dropdown-item" href="#">Action</a>
+				          <a class="dropdown-item" href="#">Another action</a>
+				          <div class="dropdown-divider"></div>
+				          <a class="dropdown-item" href="#">Something else here</a>
+				        </div>
+				    </li>
+					<li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          Received
+				        </a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a class="dropdown-item" href="#">Action</a>
+				          <a class="dropdown-item" href="#">Another action</a>
+				          <div class="dropdown-divider"></div>
+				          <a class="dropdown-item" href="#">Something else here</a>
+				        </div>
+				    </li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<div class="dropdown float_right">
+				  <button class="dropbtn">Option
+				  	<i class="fa fa-caret-down"></i>
+				  </button>
+				  <div class="dropdown-content">
+				  <a href="#">Link 1</a>
+				  <a href="#">Link 2</a>
+				  <a href="#">Link 3</a>
+				  </div>
+				</div><br>
+				<table class="table" border="1">
+					<tr>
+						<td>
+							<table>
+								<tr><td>11 Apre2019</td></tr>
+								<tr><td>Xero sub</td></tr>
+								<tr><td>More details</td></tr>
+							</table>
+						</td>
+						<td></td>
+						<td></td>
+					</tr>	
+				</table>
+			</div>
+			<div class="col-sm-12">
+				<button type="submit" style="float: right;">Ok</button>
+			</div>
+			<br><br>
+			<div class="col-sm-12">
+				<div class="dropdown float_right">
+				  <button class="dropbtn">Option
+				  	<i class="fa fa-caret-down"></i>
+				  </button>
+				  <div class="dropdown-content">
+				  <a href="#">Link 1</a>
+				  <a href="#">Link 2</a>
+				  <a href="#">Link 3</a>
+				  </div>
+				</div><br>
+				<table class="table" border="1">
+					<tr>
+						<td>
+							<table>
+								<tr><td>11 Apre2019</td></tr>
+								<tr><td>Xero sub</td></tr>
+								<tr><td>More details</td></tr>
+							</table>
+						</td>
+						<td></td>
+						<td></td>
+					</tr>	
+				</table>
+			</div>
+			<div class="col-sm-12">
+				
+				<button type="submit" style="float: right;">Ok</button>
+			</div>
+			<br><br>
+		</div>
+		<div class="col-sm-6">
+			<h6>...then match with your transactions in Xero</h6>
+			<div class="line"></div>
+			<div class="col-sm-12">
+				<div class="dropdown float_right">
+				  <button class="dropbtn" >Spent
+				  	<i class="fa fa-caret-down"></i>	
+				  </button>
+				  <div class="dropdown-content">
+				  <a href="#">Link 1</a>
+				  <a href="#">Link 2</a>
+				  <a href="#">Link 3</a>
+				  </div>
+				</div>
+				<div class="dropdown float_right">
+				  <button class="dropbtn">Received
+				  	<i class="fa fa-caret-down"></i>
+				  </button>
+				  <div class="dropdown-content">
+				  <a href="#">Link 1</a>
+				  <a href="#">Link 2</a>
+				  <a href="#">Link 3</a>
+				  </div>
+				</div>
+			</div>
+
+			<br>
+			<div class="col-sm-12">
+				<ul class="nav nav-pills mb-3" id="pills-tabb" role="tablist">
+				 	<li class="nav-item">
+				    	<a class="nav-link active menu_font" id="pills-Match-tab" data-toggle="pill" href="#pills-Match" role="tab" aria-controls="pills-Match" aria-selected="true">Match</a>
+				  	</li>
+				  	<li class="nav-item">
+				    	<a class="nav-link menu_font" id="Create" data-toggle="pill" href="#pills-Create" role="tab" aria-controls="pills-Create" aria-selected="false">Create</a>
+				  	</li>
+				  	<li class="nav-item">
+				    	<a class="nav-link menu_font" id="pills-Transfer-tab" data-toggle="pill" href="#pills-Transfer" role="tab" aria-controls="pills-Transfer" aria-selected="false">Transfer</a>
+				  	</li>
+				  	<li class="nav-item">
+				    	<a class="nav-link menu_font" id="pills-Discuss-tab" data-toggle="pill" href="#pills-Discuss" role="tab" aria-controls="pills-Discuss" aria-selected="false">Discuss</a>
+				  	</li>
+			    </ul>
+				<div class="tab-content" id="pills-tabContent">
+					<div class="tab-pane fade show active" id="pills-Match" role="tabpanel" aria-labelledby="pills-Match-tab">
+				  	Match
+				  	</div>
+				  	<div class="tab-pane fade" id="pills-Create" role="tabpanel" aria-labelledby="Create">
+				  		<i class="namefont">Who</i><input type="text" name="who" class="input_text">
+				  		<i class="namefont">What</i><select class="input_text">
+				  			<option></option>
+				  		</select><br>
+				  		<label>
+				  			<i class="namefont">Why</i><input type="text" name="who" class="input_text2">
+				  			
+				  		</label>
+				  		<br>
+
+				  		<select class="input_text3">
+				  			<option>Block $ amp;Bricking</option>
+				  		</select>
+				  		<select class="input_text3">
+				  			<option>No GST</option>
+				  		</select>
+				  		<button class="add_detail">Add Detail</button>
+				  	</div>
+				  	<div class="tab-pane fade" id="pills-Transfer" role="tabpanel" aria-labelledby="pills-Transfer-tab">
+				  	Transfer
+				  	</div>
+				  	<div class="tab-pane fade" id="pills-Discuss" role="tabpanel" aria-labelledby="pills-Discuss-tab">
+				  	Discuss
+				  	</div>
+				</div>
+			</div>
+			
+			<hr>
+			<!-- second====================== -->
+
+			<div class="col-sm-12">
+				<ul class="nav nav-pills mb-3" id="pills-tabbb" role="tablist">
+				 	<li class="nav-item">
+				    	<a class="nav-link active menu_font" id="pills-Match2-tab" data-toggle="pill" href="#pills-Match2" role="tab" aria-controls="pills-Match2" aria-selected="true">Match</a>
+				  	</li>
+				  	<li class="nav-item">
+				    	<a class="nav-link menu_font" id="Create2" data-toggle="pill" href="#pills-Create2" role="tab" aria-controls="pills-Create2" aria-selected="false">Create</a>
+				  	</li>
+				  	<li class="nav-item">
+				    	<a class="nav-link menu_font" id="pills-Transfer2-tab" data-toggle="pill" href="#pills-Transfer2" role="tab" aria-controls="pills-Transfer2" aria-selected="false">Transfer</a>
+				  	</li>
+				  	<li class="nav-item">
+				    	<a class="nav-link menu_font" id="pills-Discuss2-tab" data-toggle="pill" href="#pills-Discuss2" role="tab" aria-controls="pills-Discuss2" aria-selected="false">Discuss</a>
+				  	</li>
+			    </ul>
+				<div class="tab-content" id="pills-tabContent">
+					<div class="tab-pane fade show active" id="pills-Match2" role="tabpanel" aria-labelledby="pills-Match2-tab">
+				  	Match
+				  	</div>
+				  	<div class="tab-pane fade" id="pills-Create2" role="tabpanel" aria-labelledby="Create2">
+				  		<i class="namefont">Who</i><input type="text" name="who" class="input_text">
+				  		<i class="namefont">What</i><select class="input_text">
+				  			<option></option>
+				  		</select><br>
+				  		<label>
+				  			<i class="namefont">Why</i><input type="text" name="who" class="input_text2">
+				  			
+				  		</label>
+				  		<br>
+
+				  		<select class="input_text3">
+				  			<option>Block $ amp;Bricking</option>
+				  		</select>
+				  		<select class="input_text3">
+				  			<option>No GST</option>
+				  		</select>
+				  		<button class="add_detail">Add Detail</button>
+				  	</div>
+				  	<div class="tab-pane fade" id="pills-Transfer2" role="tabpanel" aria-labelledby="pills-Transfer2-tab">
+				  	Transfer
+				  	</div>
+				  	<div class="tab-pane fade" id="pills-Discuss2" role="tabpanel" aria-labelledby="pills-Discuss2-tab">
+				  	Discuss
+				  	</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	<!-- =================================end right menu=============== -->
+</div>
+
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+
+</body>
+</html>
